@@ -15,7 +15,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,14 +51,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Context context = getApplicationContext();
         String buttonTxt = buttonText.toString();
         //make toast and show it
-        Toast toast = Toast.makeText(context, "This button will launch my" +buttonTxt+ "app!", Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(context, "This button will launch my " +buttonTxt+ " app!", Toast.LENGTH_SHORT);
         toast.show();
     }
 
-    @Override
-    public void onClick(View v) {
-        Toast.makeText(getApplicationContext(), "hfhjfh", Toast.LENGTH_LONG).show();
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
